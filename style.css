@@ -137,7 +137,7 @@ section {
 }
 .card {
   display: grid;
-  grid-template-rows: 250px 1.5fr;
+  grid-template-rows: minmax(250px, auto) 1.5fr;
   grid-template-areas:
     "top"
     "bottom";
@@ -152,6 +152,10 @@ section {
   background: white;
   max-width: 100%;
   grid-row: 1/2;
+}
+
+.card {
+  grid-template-rows: 250px 1.5fr;
 }
 
 .card img {
