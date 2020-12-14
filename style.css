@@ -1,12 +1,25 @@
+:root {
+  --main-bg: white;
+  --text-main: black;
+  --black-bg: rgb(25, 26, 29);
+  --green: #93b876;
+  --grey-border: rgba(255, 255, 255, 0.3);
+  --text-on-color: white;
+  --card-bg: #f6f6f6;
+  --card-bottom: #5e5e5e;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   flex-direction: column;
-  background: white;
+  background: var(--main-bg);
+  color: var(--text-main);
 }
 
 /* header */
@@ -24,23 +37,29 @@ header {
 .nav-inside {
   display: flex;
   flex-direction: row;
-  background: rgb(25, 26, 29);
+  background: var(--black-bg);
   justify-content: space-between;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid var(--grey-border);
   z-index: 99;
 }
+
 #author-logo,
 .other-pages {
   display: flex;
   flex-direction: row;
 }
 #author-logo li a {
-  color: #93b876;
+  color: var(--green);
   font-size: 1.35rem;
   font-weight: bold;
 }
+
+.nav ul li {
+  list-style-type: none;
+}
+
 .nav ul li a {
-  color: white;
+  color: var(--text-on-color);
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -66,7 +85,7 @@ section {
   margin-top: 65px;
   text-align: center;
   line-height: 1.75;
-  color: white;
+  color: var(--text-on-color);
   min-height: 85vh;
   padding-top: 3rem;
   padding-bottom: 7.5rem;
@@ -81,7 +100,7 @@ section {
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 2rem;
-  color: #93b876;
+  color: var(--green);
 }
 
 .about p {
@@ -124,7 +143,7 @@ section {
   letter-spacing: 2px;
   font-size: 2rem;
   width: 100%;
-  color: #93b876;
+  color: var(--green);
   text-transform: uppercase;
 }
 
@@ -143,13 +162,13 @@ section {
     "bottom";
   margin-top: 4rem;
   justify-content: center;
-  background: #f6f6f6;
+  background: var(--card-bg);
   border-radius: 5px;
   color: #5e5e5e;
 }
 .top-card {
   grid-area: top;
-  background: white;
+  background: var(--main-bg);
   max-width: 100%;
   grid-row: 1/2;
 }
@@ -161,7 +180,7 @@ section {
 .card img {
   width: 100%;
   height: 100%;
-  background: white;
+  background: var(--main-bg);
   object-fit: cover;
   object-position: 50% 50%;
 }
@@ -173,7 +192,7 @@ section {
 }
 
 .article a {
-  color: #93b876;
+  color: var(--green);
 }
 .article h3 {
   padding-top: 0.5rem;
@@ -187,10 +206,10 @@ section {
 .slash {
   padding-left: 1rem;
   padding-right: 1rem;
-  color: #93b876;
+  color: var(--green);
 }
 .category {
-  color: #93b876;
+  color: var(--green);
 }
 .date {
   color: rgba(0, 0, 0, 0.7);
@@ -208,10 +227,10 @@ section {
   padding: 1.35rem 2.5rem;
   font-size: 1.25rem;
   outline: transparent;
-  background: #93b876;
-  border: 1px solid #93b876;
+  background: var(--green);
+  border: 1px solid var(--green);
   border-radius: 35px;
-  color: white;
+  color: var(--text-on-color);
   text-decoration: none;
   letter-spacing: 1px;
   margin-top: 2rem;
@@ -223,7 +242,7 @@ section {
 .medium-more:focus {
   background: transparent;
   border: 2px solid #93b876;
-  color: #93b876;
+  color: var(--green);
   transform: scale(1.1);
   font-weight: bold;
 }
@@ -233,11 +252,11 @@ section {
 .project {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   padding: 3rem 5%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.6;
-  color: #5e5e5e;
+  color: var(--card-bottom);
 }
 .img-card {
   margin: 0 auto;
@@ -253,7 +272,7 @@ section {
 }
 
 .project-desc {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .technology p {
@@ -269,7 +288,7 @@ section {
 
 .project-desc a {
   font-size: 2rem;
-  color: #93b876;
+  color: var(--green);
 }
 .project-title {
   padding-bottom: 1.5rem;
@@ -286,7 +305,7 @@ section {
   clip-path: polygon(28% 0, 100% 11%, 100% 100%, 0 100%, 0% 17%);
   padding: 5% 0 0;
   margin-top: 5rem;
-  color: white;
+  color: var(--text-on-color);
 }
 
 .contact {
@@ -306,7 +325,7 @@ section {
 .in-touch h2 {
   text-transform: uppercase;
   line-height: 4;
-  color: #93b876;
+  color: var(--green);
   font-size: 1.3rem;
 }
 
@@ -329,20 +348,20 @@ section {
 }
 
 .social-media li a {
-  color: white;
+  color: var(--text-on-color);
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .list-icon {
   padding-right: 0.75rem;
-  color: #93b876;
+  color: var(--green);
   font-size: 1.5rem;
 }
 
 .foot-note {
   height: 60px;
-  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-top: 2px solid var(--grey-border);
   letter-spacing: 1px;
 
   color: rgba(255, 255, 255, 0.7);
